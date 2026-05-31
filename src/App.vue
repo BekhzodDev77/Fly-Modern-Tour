@@ -4,7 +4,7 @@
     <header class="flex justify-between items-center px-4 sm:px-8 lg:px-16 py-3 bg-white shadow-sm sticky top-0 z-50">
       <div>
         <img class="w-[130px] h-[65px] sm:w-[160px] sm:h-[80px] lg:w-[200px] lg:h-[100px] object-contain"
-          src="https://www.fly-modern-tour.uz/assets/Screenshot%202025-06-21%20at%2021.35.40-C5sM2H5X.png"
+          src="./assets/images/Logo.png"
           alt="logo">
       </div>
 
@@ -344,7 +344,7 @@
       <p class="text-sm sm:text-base mb-2">Direktor: Bekzod Ochilov</p>
       <a href="tel:+998938936707"
         class="text-amber-400 text-lg sm:text-xl md:text-2xl font-bold tracking-wider hover:text-amber-500 transition-colors duration-300 mb-6 block">
-        +998938936707
+        +998 91 322 90 25
       </a>
       <button class="bg-amber-400 text-white font-medium px-6 py-3 min-w-[150px] transition-all duration-300 hover:bg-amber-500 shadow-sm active:scale-95 text-sm sm:text-base">
         Joy Band Qilish
