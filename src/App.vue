@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- HEADER -->
-    <header class="flex justify-between items-center px-4 sm:px-8 lg:px-16 py-3 bg-white shadow-sm sticky top-0 z-50">
+    <header class="flex justify-between items-center px-4 sm:px-8 lg:px-16 py-3 bg-white shadow-sm  top-0 z-50">
       <div>
         <img class="w-[130px] h-[65px] sm:w-[160px] sm:h-[80px] lg:w-[200px] lg:h-[100px] object-contain"
           src="./assets/images/Logo.png"
@@ -10,10 +10,10 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-6 lg:gap-10 font-bold">
-        <a href="" class="transition-all duration-500 text-[15px] hover:text-yellow-500 cursor-pointer">Asosiy sahifa</a>
-        <a href="" class="transition-all duration-500 text-[15px] hover:text-yellow-500">Biz haqimizda</a>
-        <a href="" class="transition-all duration-500 text-[15px] hover:text-yellow-500">Turlar</a>
-        <a href="" class="transition-all duration-500 text-[15px] hover:text-yellow-500">Kontaktlar</a>
+        <a href="#sec1" class="transition-all duration-500 text-[15px] hover:text-yellow-500 cursor-pointer">Asosiy sahifa</a>
+        <a href="#sec4" class="transition-all duration-500 text-[15px] hover:text-yellow-500">Biz haqimizda</a>
+        <a href="#sec5" class="transition-all duration-500 text-[15px] hover:text-yellow-500">Turlar</a>
+        <a href="#sec10" class="transition-all duration-500 text-[15px] hover:text-yellow-500">Kontaktlar</a>
       </nav>
 
       <!-- Mobile Hamburger -->
@@ -26,14 +26,14 @@
 
     <!-- Mobile Menu -->
     <div v-if="menuOpen" class="md:hidden bg-white shadow-lg px-6 py-4 flex flex-col gap-4 font-bold z-40">
-      <a href="" class="transition-all duration-500 text-[15px] hover:text-yellow-500" @click="menuOpen=false">Asosiy sahifa</a>
-      <a href="" class="transition-all duration-500 text-[15px] hover:text-yellow-500" @click="menuOpen=false">Biz haqimizda</a>
-      <a href="" class="transition-all duration-500 text-[15px] hover:text-yellow-500" @click="menuOpen=false">Turlar</a>
-      <a href="" class="transition-all duration-500 text-[15px] hover:text-yellow-500" @click="menuOpen=false">Kontaktlar</a>
+      <a href="#sec1" class="transition-all duration-500 text-[15px] hover:text-yellow-500" @click="menuOpen=false">Asosiy sahifa</a>
+      <a href="" id="sec4" class="transition-all duration-500 text-[15px] hover:text-yellow-500" @click="menuOpen=false">Biz haqimizda</a>
+      <a href="" id="sec5" class="transition-all duration-500 text-[15px] hover:text-yellow-500" @click="menuOpen=false">Turlar</a>
+      <a href="" id="sec4" class="transition-all duration-500 text-[15px] hover:text-yellow-500" @click="menuOpen=false">Kontaktlar</a>
     </div>
 
     <!-- SECTION 1 - HERO -->
-    <section>
+    <section id="sec1">
       <div id="background"
         class=" relative flex flex-col justify-center items-start min-h-[500px] sm:min-h-[580px] lg:h-[630px] w-full text-white px-4 sm:px-10 lg:px-[150px] xl:px-[300px]">
         <div class="absolute inset-0 bg-black/10"></div>
@@ -43,7 +43,7 @@
           <p class="text-sm sm:text-base lg:text-lg max-w-[600px] mb-6">
             Sayohat orzularingizni haqiqatga aylantiring: rejalashtiring, kashf qiling va unutilmas xotiralar yarating.
           </p>
-          <button class="bg-amber-400 text-white font-semibold px-5 py-2.5 sm:px-6 sm:py-3 rounded-[5px] hover:bg-amber-600 text-sm sm:text-base">
+          <button class="bg-amber-400 text-white font-semibold px-5 py-2.5 sm:px-6 sm:py-3 rounded-[5px] hover:bg-amber-600 text-sm sm:text-base" @click="scrollToSection('sec5')">
             Ko'proq bilish
           </button>
 
@@ -178,7 +178,7 @@
   </section>
 
     <!-- SECTION 4 - CARDS -->
-    <section class="pt-[60px] sm:pt-[80px]">
+    <section id="sec4" class=" pt-[60px] sm:pt-[80px]">
       <div class="w-full bg-[#f4f4f4] pt-[60px] sm:pt-[80px] pb-[60px] sm:pb-[80px] px-4 sm:px-8 lg:px-[10%]">
         <div class="text-center mb-8 sm:mb-10">
           <h6 class="text-yellow-400 mb-3 text-sm sm:text-base">Bizning manzillarimizni kashf eting</h6>
@@ -203,7 +203,7 @@
               <p class="text-[12px] text-[#7a7a7a] leading-[22px]">Dubayning osmono'par binolari, hashamatli xaridlari va cho'l sarguzashtlarining boyligidan zavqlaning.</p>
             </div>
             <div class="flex">
-              <a href="" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center border-r border-gray-300">KO'PROQ BILISH</a>
+              <a href="tel:+998777777777" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center border-r border-gray-300">KO'PROQ BILISH</a>
               <a href="" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center">BAND QILISH</a>
             </div>
           </div>
@@ -223,7 +223,7 @@
               <p class="text-[12px] text-[#7a7a7a] leading-[22px]">Turkiyaning qadimiy xarobalardan tortib jonli bozorlarigacha bo'lgan jozibali tarixiga sho'ng'ing.</p>
             </div>
             <div class="flex">
-              <a href="" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center border-r border-gray-300">KO'PROQ BILISH</a>
+              <a href="tel:+998777777777" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center border-r border-gray-300">KO'PROQ BILISH</a>
               <a href="" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center">BAND QILISH</a>
             </div>
           </div>
@@ -243,7 +243,7 @@
               <p class="text-[12px] text-[#7a7a7a] leading-[22px]">Sharm al-Shayx — Qizil dengizning eng yaxshi sho'ng'in joylari va noyob dengiz hayotidan rohatlaning.</p>
             </div>
             <div class="flex">
-              <a href="" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center border-r border-gray-300">KO'PROQ BILISH</a>
+              <a href="tel:+998777777777" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center border-r border-gray-300">KO'PROQ BILISH</a>
               <a href="" class="text-gray-400 hover:text-yellow-500 w-1/2 p-3 text-[11px] text-center">BAND QILISH</a>
             </div>
           </div>
@@ -252,7 +252,7 @@
     </section>
 
     <!-- SECTION 5 - SERVICES -->
-    <section class="px-4 sm:px-8 lg:px-16 pt-[60px] sm:pt-[80px]">
+    <section id="sec5" class="px-4 sm:px-8 lg:px-16 pt-[60px] sm:pt-[80px]">
       <div class="text-center mb-8 sm:mb-10">
         <h6 class="text-yellow-400 mb-3 text-sm sm:text-base">Bizning xizmatlar</h6>
         <h4 class="text-[20px] sm:text-[24px] lg:text-[25px] font-semibold">Ishonch bilan kashf eting</h4>
@@ -346,7 +346,7 @@
         class="text-amber-400 text-lg sm:text-xl md:text-2xl font-bold tracking-wider hover:text-amber-500 transition-colors duration-300 mb-6 block">
         +998 91 322 90 25
       </a>
-      <button class="bg-amber-400 text-white font-medium px-6 py-3 min-w-[150px] transition-all duration-300 hover:bg-amber-500 shadow-sm active:scale-95 text-sm sm:text-base">
+      <button class="hover:bg-white hover:text-amber-400 hover:border-amber-300 hover:border-2 bg-amber-400 text-white font-medium px-6 py-3 min-w-[150px] transition-all duration-300 hover:bg-amber-500 shadow-sm active:scale-95 text-sm sm:text-base">
         Joy Band Qilish
       </button>
     </section>
@@ -354,7 +354,7 @@
     <hr class="text-gray-300">
 
     <!-- SECTION 10 - FOOTER -->
-    <section class="px-4 sm:px-8 lg:px-16 my-10 sm:my-[60px] lg:my-[100px]">
+    <section id="sec10" class="px-4 sm:px-8 lg:px-16 my-10 sm:my-[60px] lg:my-[100px]">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
         <!-- Logo + Social -->
         <div class="flex flex-col gap-4">
@@ -431,6 +431,15 @@
 
 <script setup>
 import { ref } from 'vue'
+const scrollToSection = (sec5) => {
+  const element = document.getElementById(sec5);
+  if (element) {
+    element.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'start'
+    });
+  }
+};
 
 const menuOpen = ref(false)
 
