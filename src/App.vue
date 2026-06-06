@@ -283,23 +283,32 @@
       <div class="footer__grid">
 
         <!-- Brand -->
-        <div class="footer__brand">
-          <img src="./assets/images/Screenshot 2026-05-26 114122.png" alt="Logotip" class="footer__logo" />
-          <p class="footer__brand-desc">
-            Biz bilan dunyoni zabt eting. Sayohat tashkil qilishda eng yaxshi hamkoringiz
-          </p>
-          <a href="https://www.instagram.com/bekzodochilov57/" class="footer__social" aria-label="Instagram">
-            <svg width="44" height="44" viewBox="-2.5 -2.5 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M15.5 5H9.5C7.291 5 5.5 6.791 5.5 9V15C5.5 17.209 7.291 19 9.5 19H15.5C17.709 19 19.5 17.209 19.5 15V9C19.5 6.791 17.709 5 15.5 5Z"
-                stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12.5 15C10.843 15 9.5 13.657 9.5 12C9.5 10.343 10.843 9 12.5 9C14.157 9 15.5 10.343 15.5 12C15.5 12.796 15.184 13.559 14.621 14.121C14.059 14.684 13.296 15 12.5 15Z"
-                stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="15.5" y="9" width="2" height="2" rx="1" transform="rotate(-90 15.5 9)" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
+        <div class="footer__brand flex flex-col items-start gap-4">
+  <!-- Logotip rasm va matnlari bloki -->
+  <div class="footer__logo-wrapper flex flex-col items-center text-center">
+    <img src="./assets/images/Logo.png" alt="Logotip" class="footer__logo w-24 h-auto" />
+    <span class="text-xl font-bold tracking-wide text-gray-100 uppercase mt-2">Fly Modern</span>
+    <span class="text-xs font-semibold tracking-wider text-gray-300 uppercase">Aviakassa Visa Tourism</span>
+  </div>
+
+  <!-- Tavsif matni -->
+  <p class="footer__brand-desc text-sm text-gray-500 max-w-xs mt-2">
+    Biz bilan dunyoni zabt eting. Sayohat tashkil qilishda eng yaxshi hamkoringiz
+  </p>
+
+  <!-- Ijtimoiy tarmoq (Instagram) -->
+  <a href="https://www.instagram.com/bekzodochilov57/" class="footer__social text-gray-800 hover:text-amber-500 transition-colors" aria-label="Instagram">
+    <svg width="32" height="32" viewBox="-2.5 -2.5 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M15.5 5H9.5C7.291 5 5.5 6.791 5.5 9V15C5.5 17.209 7.291 19 9.5 19H15.5C17.709 19 19.5 17.209 19.5 15V9C19.5 6.791 17.709 5 15.5 5Z"
+        stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M12.5 15C10.843 15 9.5 13.657 9.5 12C9.5 10.343 10.843 9 12.5 9C14.157 9 15.5 10.343 15.5 12C15.5 12.796 15.184 13.559 14.621 14.121C14.059 14.684 13.296 15 12.5 15Z"
+        stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="15.5" y="9" width="2" height="2" rx="1" transform="rotate(-90 15.5 9)" fill="currentColor"/>
+    </svg>
+  </a>
+</div>
 
         <!-- Links -->
         <nav class="footer__links" aria-label="Foydali havolalar">
