@@ -1,13 +1,11 @@
 <template>
   <div :class="['page', isDark ? 'dark' : 'light']">
 
-    <!-- =================== HEADER =================== -->
     <header class="header">
       <div class="header__logo">
         <img class="header__logo-img" src="./assets/images/Logo.png" alt="Sayohat agentligi logotipi" />
       </div>
 
-      <!-- Desktop Nav -->
       <nav class="header__nav" aria-label="Asosiy navigatsiya">
         <a href="#sec1" class="header__nav-link">Asosiy sahifa</a>
         <a href="#sec4" class="header__nav-link">Biz haqimizda</a>
@@ -16,7 +14,6 @@
       </nav>
 
       <div class="header__controls">
-        <!-- Dark/Light toggle -->
         <button
           @click="toggleTheme"
           class="theme-toggle"
@@ -26,7 +23,6 @@
           <span v-else class="theme-toggle__icon">🌙</span>
         </button>
 
-        <!-- Mobile Hamburger -->
         <button
           @click="menuOpen = !menuOpen"
           class="header__burger"
@@ -41,7 +37,6 @@
       </div>
     </header>
 
-    <!-- Mobile Menu -->
     <nav
       id="mobile-menu"
       v-show="menuOpen"
@@ -56,7 +51,6 @@
 
     <main>
 
-      <!-- =================== HERO =================== -->
       <section id="sec1" class="hero" aria-label="Bosh sahifa banner">
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="hero__content">
@@ -67,7 +61,6 @@
           </p>
           <button class="hero__btn" @click="scrollTo('sec5')">Ko'proq bilish</button>
 
-          <!-- Booking Form -->
           <div class="booking">
             <div class="booking__form">
               <input type="text"  placeholder="Ismingiz..."    class="booking__input" aria-label="Ism" />
@@ -79,7 +72,6 @@
         </div>
       </section>
 
-      <!-- =================== DESTINATIONS =================== -->
       <section class="destinations" aria-labelledby="dest-title">
         <p class="section-label">Bizning mashhur manzilimiz</p>
         <h2 id="dest-title" class="section-title">
@@ -109,7 +101,6 @@
         </div>
       </section>
 
-      <!-- =================== EXPLORE =================== -->
       <section class="explore" aria-labelledby="explore-title">
   <h2 id="explore-title" class="explore__title">Maqsadlarni osongina o'rganing</h2>
 
@@ -169,7 +160,6 @@
 
   </section>
 
-      <!-- =================== CARDS / BIZ HAQIMIZDA =================== -->
       <section id="sec4" class="cards-section" aria-labelledby="cards-title">
         <div class="cards-section__inner">
           <header class="cards-section__header">
@@ -194,7 +184,7 @@
                 <p class="tour-card__desc">{{ card.desc }}</p>
               </div>
               <footer class="tour-card__actions">
-                <a href="tel:+998777777777" class="tour-card__action">KO'PROQ BILISH</a>
+                <a href="tel:+998*********" class="tour-card__action">KO'PROQ BILISH</a>
                 <a href="#"                  class="tour-card__action">BAND QILISH</a>
               </footer>
             </article>
@@ -202,7 +192,6 @@
         </div>
       </section>
 
-      <!-- =================== SERVICES =================== -->
       <section id="sec5" class="services" aria-labelledby="services-title">
         <header class="services__header">
           <p class="section-label">Bizning xizmatlar</p>
@@ -222,7 +211,6 @@
         <hr class="divider" />
       </section>
 
-      <!-- =================== DREAM TRIP =================== -->
       <section class="dream-trip" aria-labelledby="dream-title">
         <h2 id="dream-title" class="dream-trip__title">Orzuyingdagi sayohatni rejalashtiring</h2>
         <p class="dream-trip__desc">
@@ -233,7 +221,6 @@
         <a href="#sec10" class="cta-btn">Bog'lanish</a>
       </section>
 
-      <!-- =================== PLANS =================== -->
       <section class="plans" aria-labelledby="plans-title">
         <header class="plans__header">
           <p class="section-label">Maxsus Takliflar</p>
@@ -256,7 +243,6 @@
         </div>
       </section>
 
-      <!-- =================== MAP =================== -->
       <section class="map-section" aria-label="Bizning manzil xaritada">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314.85795074969553!2d69.26236261883909!3d41.34256037392012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8d0a3eff6793%3A0x374f8cd599c1c8fa!2sYagona%20Darcha%20Shaykhontokhur%20tumani!5e0!3m2!1suz!2s!4v1779775879180!5m2!1suz!2s"
@@ -265,7 +251,6 @@
         ></iframe>
       </section>
 
-      <!-- =================== CTA =================== -->
       <section class="cta-section" aria-labelledby="cta-title">
         <p class="cta-section__label">Biz bilan o'z joyingizni band qiling!</p>
         <h2 id="cta-title" class="cta-section__title">Ta'tilingizni biz bilan o'tkazing</h2>
@@ -278,11 +263,9 @@
 
     </main>
 
-    <!-- =================== FOOTER =================== -->
     <footer id="sec10" class="footer" aria-label="Footer">
       <div class="footer__grid">
 
-        <!-- Brand -->
         <div class="footer__brand flex flex-col items-start gap-4">
   <!-- Logotip rasm va matnlari bloki -->
   <div class="footer__logo-wrapper flex flex-col items-center text-center">
@@ -291,12 +274,10 @@
     <span class="text-xs font-semibold tracking-wider text-gray-300 uppercase">Aviakassa Visa Tourism</span>
   </div>
 
-  <!-- Tavsif matni -->
   <p class="footer__brand-desc text-sm text-gray-500 max-w-xs mt-2">
     Biz bilan dunyoni zabt eting. Sayohat tashkil qilishda eng yaxshi hamkoringiz
   </p>
 
-  <!-- Ijtimoiy tarmoq (Instagram) -->
   <a href="https://www.instagram.com/bekzodochilov57/" class="footer__social text-gray-800 hover:text-amber-500 transition-colors" aria-label="Instagram">
     <svg width="32" height="32" viewBox="-2.5 -2.5 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -310,7 +291,6 @@
   </a>
 </div>
 
-        <!-- Links -->
         <nav class="footer__links" aria-label="Foydali havolalar">
           <h3 class="footer__links-title">Foydali Havolalar</h3>
           <ul class="footer__links-list">
@@ -323,7 +303,6 @@
           </ul>
         </nav>
 
-        <!-- Contact -->
         <address class="footer__contact">
           <h3 class="footer__contact-title">Aloqa Ma'lumoti</h3>
           <p class="footer__contact-desc">
@@ -354,7 +333,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-/* ---------- Theme ---------- */
 const isDark = ref(false)
 
 onMounted(() => {
@@ -367,15 +345,12 @@ function toggleTheme() {
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
 }
 
-/* ---------- Menu ---------- */
 const menuOpen = ref(false)
 
-/* ---------- Scroll ---------- */
 function scrollTo(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
-/* ---------- Data ---------- */
 const explorePlaces = [
   { img: './assets/images/train.png',    title: 'Biz bilan arzon temir yo\'l chiptalari',                   region: 'Butun dunyo',             desc: 'Temir yo\'l sarguzashtiga kiring va kashf qiling dunyo bo\'ylab yo\'nalishlar. Bu go\'zal bo\'ladimi landshaftlar, gavjum shaharlar yoki madaniy toshlar, bizning temir yo\'l xizmatlari noyob va qulay yo\'lni taklif qiladi.' },
   { img: './assets/images/plane.png',    title: 'Havo sayohatlari uchun qiziqarli takliflarni kashf eting', region: 'Global manzillar',          desc: 'Havodagi sarguzashtga boring va kashf qiling dunyo bo\'ylab yo\'nalishlar. Bizning aviakompaniya xizmatlari qulaylikni ta\'minlaydi va dunyo bo\'ylab sayohat qilishning ajoyib usulini taqdim etadi.' },
@@ -414,16 +389,11 @@ const footerLinks = [
 </script>
 
 <style lang="scss" scoped>
-/* ============================================================
-   CSS CUSTOM PROPERTIES (Design Tokens)
-   ============================================================ */
 .page {
-  /* --- Brand palette --- */
   --clr-accent:        #f59e0b;
   --clr-accent-hover:  #d97706;
   --clr-accent-light:  #fde68a;
 
-  /* --- Light mode --- */
   --clr-bg:            #ffffff;
   --clr-bg-muted:      #f4f4f4;
   --clr-surface:       #ffffff;
@@ -435,7 +405,6 @@ const footerLinks = [
   --clr-shadow:        rgba(0, 0, 0, 0.10);
   --clr-plan-bg:       #e5e7eb;
 
-  /* --- Typography --- */
   --font-family:       'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --font-size-xs:      11px;
   --font-size-sm:      13px;
@@ -451,7 +420,6 @@ const footerLinks = [
   --font-weight-bold:  700;
   --line-height-body:  1.625;
 
-  /* --- Spacing --- */
   --space-1:   4px;
   --space-2:   8px;
   --space-3:   12px;
@@ -465,29 +433,24 @@ const footerLinks = [
   --space-20:  80px;
   --space-24:  96px;
 
-  /* --- Layout --- */
   --px-mobile:  var(--space-4);
   --px-sm:      var(--space-8);
   --px-md:      var(--space-16);
   --px-lg:      10%;
 
-  /* --- Radius --- */
   --radius-sm:  4px;
   --radius-md:  8px;
   --radius-lg:  16px;
   --radius-xl:  20px;
 
-  /* --- Transitions --- */
   --transition-fast:  0.2s ease;
   --transition-base:  0.3s ease;
   --transition-slow:  0.5s ease;
   --transition-card:  0.6s ease-in-out;
 
-  /* --- Z-index --- */
   --z-header: 50;
   --z-menu:   40;
 
-  /* ---- Apply base ---- */
   font-family:      var(--font-family);
   background-color: var(--clr-bg);
   color:            var(--clr-text);
@@ -495,9 +458,7 @@ const footerLinks = [
   transition:       background-color var(--transition-base), color var(--transition-base);
 }
 
-/* ============================================================
-   DARK MODE OVERRIDES
-   ============================================================ */
+
 .page.dark {
   --clr-bg:          #0f172a;
   --clr-bg-muted:    #1e293b;
@@ -511,9 +472,7 @@ const footerLinks = [
   --clr-plan-bg:     #334155;
 }
 
-/* ============================================================
-   HEADER
-   ============================================================ */
+
 .header {
   position: sticky;
   top: 0;
@@ -583,7 +542,6 @@ const footerLinks = [
   }
 }
 
-/* ---- Burger lines ---- */
 .burger-line {
   display: block;
   width: 22px;
@@ -597,7 +555,6 @@ const footerLinks = [
   &--bot { transform: translateY(-7px) rotate(-45deg); }
 }
 
-/* ---- Theme toggle ---- */
 .theme-toggle {
   background: none;
   border: 1px solid var(--clr-border);
@@ -613,9 +570,7 @@ const footerLinks = [
   &__icon { display: block; }
 }
 
-/* ============================================================
-   MOBILE MENU
-   ============================================================ */
+
 .mobile-menu {
   position: sticky;
   top: 56px;
@@ -640,9 +595,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   SHARED HELPERS
-   ============================================================ */
+
 .section-label {
   text-align: center;
   color: var(--clr-accent);
@@ -693,9 +646,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   HERO
-   ============================================================ */
+
 .hero {
   position: relative;
   display: flex;
@@ -774,9 +725,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   BOOKING
-   ============================================================ */
+
 .booking {
   background-color: #fff;
   color: var(--clr-text-muted);
@@ -832,9 +781,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   DESTINATIONS
-   ============================================================ */
+
 .destinations {
   padding: var(--space-12) var(--px-mobile);
 
@@ -899,9 +846,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   EXPLORE
-   ============================================================ */
+
 .explore {
   padding: var(--space-6) var(--px-mobile) var(--space-8);
 
@@ -976,9 +921,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   CARDS SECTION
-   ============================================================ */
+
 .cards-section {
   padding-top: var(--space-16);
 
@@ -1082,9 +1025,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   SERVICES
-   ============================================================ */
+
 .services {
   padding: var(--space-16) var(--px-mobile) 0;
 
@@ -1151,9 +1092,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   DREAM TRIP
-   ============================================================ */
+
 .dream-trip {
   text-align: center;
   padding: var(--space-16) var(--px-mobile);
@@ -1182,9 +1121,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   PLANS
-   ============================================================ */
+
 .plans {
   padding: 0 var(--px-mobile) var(--space-16);
 
@@ -1281,9 +1218,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   MAP
-   ============================================================ */
+
 .map-section {
   width: 100%;
   height: 260px;
@@ -1297,9 +1232,7 @@ const footerLinks = [
   iframe { display: block; }
 }
 
-/* ============================================================
-   CTA SECTION
-   ============================================================ */
+
 .cta-section {
   display: flex;
   flex-direction: column;
@@ -1354,9 +1287,7 @@ const footerLinks = [
   }
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+
 .footer {
   background-color: var(--clr-surface);
   padding: var(--space-10) var(--px-mobile);
@@ -1401,7 +1332,6 @@ const footerLinks = [
     &:hover { transform: scale(1.15); color: var(--clr-accent); }
   }
 
-  /* nav links */
   &__links-title {
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-semi);
@@ -1442,7 +1372,6 @@ const footerLinks = [
     border-radius: 1px;
   }
 
-  /* contact */
   &__contact-title {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semi);
